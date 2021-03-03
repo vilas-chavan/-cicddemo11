@@ -5,11 +5,11 @@ RUN yum -y --setopt=tsflags=nodocs update && \
     yum clean all
 RUN yum -y install zip && \
 unzip
-ADD https://www.free-css.com/assets/files/free-css-templates/download/page261/lighten.zip /var/www/html
+ADD https://www.free-css.com/assets/files/free-css-templates/download/page261/reflux.zip /var/www/html
 WORKDIR /var/www/html
-RUN unzip lighten.zip
-RUN cp -rvf lighten/* .
-RUN rm -rf lighten lighten.zip
+RUN unzip reflux.zip
+RUN cp -rvf templatemo_531_reflux/* .
+RUN rm -rf templatemo_531_reflux reflux.zip
 #CMD ["/usr/sbin/httpd", "-D", "FOREGROUND"]
 CMD ["/usr/sbin/httpd", "-D", "FOREGROUND"]
 EXPOSE 80
